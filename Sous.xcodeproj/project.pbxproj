@@ -7,12 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801676FF1AE96AF7008A9C60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801676FE1AE96AF7008A9C60 /* MapKit.framework */; };
+		801677011AE9AEB9008A9C60 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801677001AE9AEB9008A9C60 /* PostTableViewCell.swift */; };
+		8057D48C1AE864AF00245E7D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D48A1AE864AF00245E7D /* Bolts.framework */; };
+		8057D48D1AE864AF00245E7D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D48B1AE864AF00245E7D /* Parse.framework */; };
+		8057D4911AE864D900245E7D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D48F1AE864D900245E7D /* ParseFacebookUtilsV4.framework */; };
+		8057D4941AE8655800245E7D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D4921AE8655800245E7D /* FBSDKCoreKit.framework */; };
+		8057D4951AE8655800245E7D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D4931AE8655800245E7D /* FBSDKLoginKit.framework */; };
+		8057D4971AE8656000245E7D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D4961AE8656000245E7D /* FBSDKShareKit.framework */; };
+		8057D4991AE8A14400245E7D /* technovation1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8057D4981AE8A14400245E7D /* technovation1-01.png */; };
+		8057D4A11AE8B30A00245E7D /* icon profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 8057D4A01AE8B30A00245E7D /* icon profile.png */; };
+		8057D4A31AE8B67100245E7D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D4A21AE8B67100245E7D /* TabBarController.swift */; };
+		8057D4A71AE8B84100245E7D /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D4A61AE8B84100245E7D /* MeViewController.swift */; };
+		8057D4B31AE90A0F00245E7D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D4B21AE90A0F00245E7D /* FeedViewController.swift */; };
+		8057D4BB1AE91F2E00245E7D /* createPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D4BA1AE91F2E00245E7D /* createPostViewController.swift */; };
+		8057D4BF1AE930B700245E7D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D4BE1AE930B700245E7D /* TableViewController.swift */; };
 		80D9AA4A1ABB3F3C00BEBDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D9AA491ABB3F3C00BEBDAB /* AppDelegate.swift */; };
 		80D9AA4C1ABB3F3C00BEBDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D9AA4B1ABB3F3C00BEBDAB /* ViewController.swift */; };
 		80D9AA4F1ABB3F3C00BEBDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA4D1ABB3F3C00BEBDAB /* Main.storyboard */; };
 		80D9AA511ABB3F3C00BEBDAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA501ABB3F3C00BEBDAB /* Images.xcassets */; };
 		80D9AA541ABB3F3C00BEBDAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA521ABB3F3C00BEBDAB /* LaunchScreen.xib */; };
 		80D9AA601ABB3F3C00BEBDAB /* SousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D9AA5F1ABB3F3C00BEBDAB /* SousTests.swift */; };
+		80D9AA6C1ABB414300BEBDAB /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D9AA6B1ABB414300BEBDAB /* PageItemController.swift */; };
+		80D9AA771ABB45F900BEBDAB /* technovation-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA6D1ABB45F900BEBDAB /* technovation-01.png */; };
+		80D9AA781ABB45F900BEBDAB /* technovation-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA6E1ABB45F900BEBDAB /* technovation-02.png */; };
+		80D9AA791ABB45F900BEBDAB /* technovation-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA6F1ABB45F900BEBDAB /* technovation-03.png */; };
+		80D9AA7A1ABB45F900BEBDAB /* technovation-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA701ABB45F900BEBDAB /* technovation-04.png */; };
+		80D9AA7B1ABB45F900BEBDAB /* technovation-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA711ABB45F900BEBDAB /* technovation-05.png */; };
+		80D9AA7C1ABB45F900BEBDAB /* technovation-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA721ABB45F900BEBDAB /* technovation-06.png */; };
+		80D9AA7D1ABB45F900BEBDAB /* technovation-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA731ABB45F900BEBDAB /* technovation-07.png */; };
+		80D9AA7E1ABB45F900BEBDAB /* technovation-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA741ABB45F900BEBDAB /* technovation-08.png */; };
+		80D9AA801ABB45F900BEBDAB /* technovation-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AA761ABB45F900BEBDAB /* technovation-10.png */; };
+		80D9AA821ABBD64200BEBDAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA811ABBD64200BEBDAB /* SystemConfiguration.framework */; };
+		80D9AA841ABBD64B00BEBDAB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA831ABBD64B00BEBDAB /* libsqlite3.dylib */; };
+		80D9AA861ABBD65300BEBDAB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA851ABBD65300BEBDAB /* StoreKit.framework */; };
+		80D9AA881ABBD65900BEBDAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA871ABBD65900BEBDAB /* Security.framework */; };
+		80D9AA8A1ABBD66100BEBDAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA891ABBD66100BEBDAB /* QuartzCore.framework */; };
+		80D9AA8C1ABBD66C00BEBDAB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA8B1ABBD66C00BEBDAB /* MobileCoreServices.framework */; };
+		80D9AA8E1ABBD67300BEBDAB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA8D1ABBD67300BEBDAB /* libz.dylib */; };
+		80D9AA901ABBD67D00BEBDAB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA8F1ABBD67D00BEBDAB /* CoreLocation.framework */; };
+		80D9AA921ABBD68400BEBDAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA911ABBD68400BEBDAB /* CoreGraphics.framework */; };
+		80D9AA941ABBD68D00BEBDAB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA931ABBD68D00BEBDAB /* CFNetwork.framework */; };
+		80D9AA961ABBD69300BEBDAB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D9AA951ABBD69300BEBDAB /* AudioToolbox.framework */; };
+		80D9AAB21ABC33B800BEBDAB /* technovation-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AAB11ABC33B800BEBDAB /* technovation-11.png */; };
+		80D9AAB41ABC33D600BEBDAB /* technovation-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D9AAB31ABC33D600BEBDAB /* technovation-09.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +64,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		801676FE1AE96AF7008A9C60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		801677001AE9AEB9008A9C60 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../PostTableViewCell.swift; sourceTree = "<group>"; };
+		8057D48A1AE864AF00245E7D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		8057D48B1AE864AF00245E7D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		8057D48F1AE864D900245E7D /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		8057D4921AE8655800245E7D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8057D4931AE8655800245E7D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8057D4961AE8656000245E7D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		8057D4981AE8A14400245E7D /* technovation1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation1-01.png"; sourceTree = "<group>"; };
+		8057D4A01AE8B30A00245E7D /* icon profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon profile.png"; sourceTree = "<group>"; };
+		8057D4A21AE8B67100245E7D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8057D4A61AE8B84100245E7D /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = ../MeViewController.swift; sourceTree = "<group>"; };
+		8057D4B21AE90A0F00245E7D /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		8057D4BA1AE91F2E00245E7D /* createPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createPostViewController.swift; sourceTree = "<group>"; };
+		8057D4BE1AE930B700245E7D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		80D9AA441ABB3F3B00BEBDAB /* Sous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D9AA481ABB3F3C00BEBDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D9AA491ABB3F3C00BEBDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +89,30 @@
 		80D9AA591ABB3F3C00BEBDAB /* SousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D9AA5E1ABB3F3C00BEBDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D9AA5F1ABB3F3C00BEBDAB /* SousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SousTests.swift; sourceTree = "<group>"; };
+		80D9AA6B1ABB414300BEBDAB /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageItemController.swift; path = ../PageItemController.swift; sourceTree = "<group>"; };
+		80D9AA6D1ABB45F900BEBDAB /* technovation-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-01.png"; sourceTree = "<group>"; };
+		80D9AA6E1ABB45F900BEBDAB /* technovation-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-02.png"; sourceTree = "<group>"; };
+		80D9AA6F1ABB45F900BEBDAB /* technovation-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-03.png"; sourceTree = "<group>"; };
+		80D9AA701ABB45F900BEBDAB /* technovation-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-04.png"; sourceTree = "<group>"; };
+		80D9AA711ABB45F900BEBDAB /* technovation-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-05.png"; sourceTree = "<group>"; };
+		80D9AA721ABB45F900BEBDAB /* technovation-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-06.png"; sourceTree = "<group>"; };
+		80D9AA731ABB45F900BEBDAB /* technovation-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-07.png"; sourceTree = "<group>"; };
+		80D9AA741ABB45F900BEBDAB /* technovation-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-08.png"; sourceTree = "<group>"; };
+		80D9AA761ABB45F900BEBDAB /* technovation-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-10.png"; sourceTree = "<group>"; };
+		80D9AA811ABBD64200BEBDAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		80D9AA831ABBD64B00BEBDAB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		80D9AA851ABBD65300BEBDAB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		80D9AA871ABBD65900BEBDAB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		80D9AA891ABBD66100BEBDAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		80D9AA8B1ABBD66C00BEBDAB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		80D9AA8D1ABBD67300BEBDAB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		80D9AA8F1ABBD67D00BEBDAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		80D9AA911ABBD68400BEBDAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		80D9AA931ABBD68D00BEBDAB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		80D9AA951ABBD69300BEBDAB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		80D9AAAA1ABBDABF00BEBDAB /* Sous-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sous-Bridging-Header.h"; sourceTree = "<group>"; };
+		80D9AAB11ABC33B800BEBDAB /* technovation-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-11.png"; sourceTree = "<group>"; };
+		80D9AAB31ABC33D600BEBDAB /* technovation-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "technovation-09.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +120,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801676FF1AE96AF7008A9C60 /* MapKit.framework in Frameworks */,
+				8057D4951AE8655800245E7D /* FBSDKLoginKit.framework in Frameworks */,
+				80D9AA961ABBD69300BEBDAB /* AudioToolbox.framework in Frameworks */,
+				80D9AA941ABBD68D00BEBDAB /* CFNetwork.framework in Frameworks */,
+				80D9AA921ABBD68400BEBDAB /* CoreGraphics.framework in Frameworks */,
+				8057D48C1AE864AF00245E7D /* Bolts.framework in Frameworks */,
+				80D9AA901ABBD67D00BEBDAB /* CoreLocation.framework in Frameworks */,
+				80D9AA8E1ABBD67300BEBDAB /* libz.dylib in Frameworks */,
+				8057D48D1AE864AF00245E7D /* Parse.framework in Frameworks */,
+				80D9AA8C1ABBD66C00BEBDAB /* MobileCoreServices.framework in Frameworks */,
+				80D9AA8A1ABBD66100BEBDAB /* QuartzCore.framework in Frameworks */,
+				80D9AA881ABBD65900BEBDAB /* Security.framework in Frameworks */,
+				80D9AA861ABBD65300BEBDAB /* StoreKit.framework in Frameworks */,
+				80D9AA841ABBD64B00BEBDAB /* libsqlite3.dylib in Frameworks */,
+				8057D4971AE8656000245E7D /* FBSDKShareKit.framework in Frameworks */,
+				8057D4941AE8655800245E7D /* FBSDKCoreKit.framework in Frameworks */,
+				80D9AA821ABBD64200BEBDAB /* SystemConfiguration.framework in Frameworks */,
+				8057D4911AE864D900245E7D /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +154,28 @@
 		80D9AA3B1ABB3F3A00BEBDAB = {
 			isa = PBXGroup;
 			children = (
+				801676FE1AE96AF7008A9C60 /* MapKit.framework */,
+				8057D4961AE8656000245E7D /* FBSDKShareKit.framework */,
+				8057D4921AE8655800245E7D /* FBSDKCoreKit.framework */,
+				8057D4931AE8655800245E7D /* FBSDKLoginKit.framework */,
+				8057D48F1AE864D900245E7D /* ParseFacebookUtilsV4.framework */,
+				8057D48A1AE864AF00245E7D /* Bolts.framework */,
+				8057D48B1AE864AF00245E7D /* Parse.framework */,
+				80D9AA951ABBD69300BEBDAB /* AudioToolbox.framework */,
+				80D9AA931ABBD68D00BEBDAB /* CFNetwork.framework */,
+				80D9AA911ABBD68400BEBDAB /* CoreGraphics.framework */,
+				80D9AA8F1ABBD67D00BEBDAB /* CoreLocation.framework */,
+				80D9AA8D1ABBD67300BEBDAB /* libz.dylib */,
+				80D9AA8B1ABBD66C00BEBDAB /* MobileCoreServices.framework */,
+				80D9AA891ABBD66100BEBDAB /* QuartzCore.framework */,
+				80D9AA871ABBD65900BEBDAB /* Security.framework */,
+				80D9AA851ABBD65300BEBDAB /* StoreKit.framework */,
+				80D9AA831ABBD64B00BEBDAB /* libsqlite3.dylib */,
+				80D9AA811ABBD64200BEBDAB /* SystemConfiguration.framework */,
 				80D9AA461ABB3F3B00BEBDAB /* Sous */,
 				80D9AA5C1ABB3F3C00BEBDAB /* SousTests */,
 				80D9AA451ABB3F3B00BEBDAB /* Products */,
+				80D9AAAA1ABBDABF00BEBDAB /* Sous-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +191,16 @@
 		80D9AA461ABB3F3B00BEBDAB /* Sous */ = {
 			isa = PBXGroup;
 			children = (
+				801677001AE9AEB9008A9C60 /* PostTableViewCell.swift */,
+				8057D4BE1AE930B700245E7D /* TableViewController.swift */,
+				8057D4B21AE90A0F00245E7D /* FeedViewController.swift */,
+				8057D4A61AE8B84100245E7D /* MeViewController.swift */,
+				80D9AA6B1ABB414300BEBDAB /* PageItemController.swift */,
 				80D9AA491ABB3F3C00BEBDAB /* AppDelegate.swift */,
 				80D9AA4B1ABB3F3C00BEBDAB /* ViewController.swift */,
 				80D9AA4D1ABB3F3C00BEBDAB /* Main.storyboard */,
+				8057D4BA1AE91F2E00245E7D /* createPostViewController.swift */,
+				8057D4A21AE8B67100245E7D /* TabBarController.swift */,
 				80D9AA501ABB3F3C00BEBDAB /* Images.xcassets */,
 				80D9AA521ABB3F3C00BEBDAB /* LaunchScreen.xib */,
 				80D9AA471ABB3F3C00BEBDAB /* Supporting Files */,
@@ -90,6 +211,19 @@
 		80D9AA471ABB3F3C00BEBDAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8057D4A01AE8B30A00245E7D /* icon profile.png */,
+				8057D4981AE8A14400245E7D /* technovation1-01.png */,
+				80D9AAB11ABC33B800BEBDAB /* technovation-11.png */,
+				80D9AA6D1ABB45F900BEBDAB /* technovation-01.png */,
+				80D9AA6E1ABB45F900BEBDAB /* technovation-02.png */,
+				80D9AA6F1ABB45F900BEBDAB /* technovation-03.png */,
+				80D9AA701ABB45F900BEBDAB /* technovation-04.png */,
+				80D9AA711ABB45F900BEBDAB /* technovation-05.png */,
+				80D9AA721ABB45F900BEBDAB /* technovation-06.png */,
+				80D9AAB31ABC33D600BEBDAB /* technovation-09.png */,
+				80D9AA731ABB45F900BEBDAB /* technovation-07.png */,
+				80D9AA741ABB45F900BEBDAB /* technovation-08.png */,
+				80D9AA761ABB45F900BEBDAB /* technovation-10.png */,
 				80D9AA481ABB3F3C00BEBDAB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +295,7 @@
 				TargetAttributes = {
 					80D9AA431ABB3F3B00BEBDAB = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = AB34279A9A;
 					};
 					80D9AA581ABB3F3C00BEBDAB = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -192,9 +327,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D9AA7C1ABB45F900BEBDAB /* technovation-06.png in Resources */,
+				80D9AA791ABB45F900BEBDAB /* technovation-03.png in Resources */,
+				80D9AA801ABB45F900BEBDAB /* technovation-10.png in Resources */,
+				80D9AAB21ABC33B800BEBDAB /* technovation-11.png in Resources */,
+				80D9AA7A1ABB45F900BEBDAB /* technovation-04.png in Resources */,
+				80D9AA7B1ABB45F900BEBDAB /* technovation-05.png in Resources */,
+				80D9AA7D1ABB45F900BEBDAB /* technovation-07.png in Resources */,
 				80D9AA4F1ABB3F3C00BEBDAB /* Main.storyboard in Resources */,
 				80D9AA541ABB3F3C00BEBDAB /* LaunchScreen.xib in Resources */,
+				80D9AA771ABB45F900BEBDAB /* technovation-01.png in Resources */,
+				80D9AAB41ABC33D600BEBDAB /* technovation-09.png in Resources */,
 				80D9AA511ABB3F3C00BEBDAB /* Images.xcassets in Resources */,
+				8057D4991AE8A14400245E7D /* technovation1-01.png in Resources */,
+				8057D4A11AE8B30A00245E7D /* icon profile.png in Resources */,
+				80D9AA781ABB45F900BEBDAB /* technovation-02.png in Resources */,
+				80D9AA7E1ABB45F900BEBDAB /* technovation-08.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +360,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8057D4A71AE8B84100245E7D /* MeViewController.swift in Sources */,
+				8057D4BB1AE91F2E00245E7D /* createPostViewController.swift in Sources */,
+				80D9AA6C1ABB414300BEBDAB /* PageItemController.swift in Sources */,
+				8057D4BF1AE930B700245E7D /* TableViewController.swift in Sources */,
 				80D9AA4C1ABB3F3C00BEBDAB /* ViewController.swift in Sources */,
 				80D9AA4A1ABB3F3C00BEBDAB /* AppDelegate.swift in Sources */,
+				8057D4B31AE90A0F00245E7D /* FeedViewController.swift in Sources */,
+				8057D4A31AE8B67100245E7D /* TabBarController.swift in Sources */,
+				801677011AE9AEB9008A9C60 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +491,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/swu/Documents/FacebookSDK,
+					"/Users/swu/parse-library-1.6.4",
+				);
 				INFOPLIST_FILE = Sous/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sous-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +512,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/swu/Documents/FacebookSDK,
+					"/Users/swu/parse-library-1.6.4",
+				);
 				INFOPLIST_FILE = Sous/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sous-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +581,7 @@
 				80D9AA651ABB3F3C00BEBDAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80D9AA661ABB3F3C00BEBDAB /* Build configuration list for PBXNativeTarget "SousTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +590,7 @@
 				80D9AA681ABB3F3C00BEBDAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
