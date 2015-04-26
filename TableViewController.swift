@@ -17,7 +17,7 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
     var manager = CLLocationManager()
 
-
+    var user = PFUser.currentUser()
     
     @IBAction func loadData(sender: AnyObject) {
         
@@ -105,26 +105,44 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
             let post:PFObject = self.timelineData.objectAtIndex(indexPath.row) as PFObject
     
     
-//            cell.postTextView.alpha = 0
-//            cell.timeStamp.alpha = 0
-//            cell.usernameLabel.alpha = 0
-//    
-//            cell.postTextView.text = "helo"
-//                
-//                
-////                post.objectForKey("foodType") as? String
-//    
-//    
-//            var dataFormatter:NSDateFormatter = NSDateFormatter()
-//            dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-//            cell.timeStamp.text = dataFormatter.stringFromDate(post.createdAt)
-//            cell.address.text = title
-//            cell.freshness.text = post.objectForKey("freshness").value
+            cell.addressLabel.alpha = 0
+            cell.timeStampLabel.alpha = 0
+            cell.usernameLabel.alpha = 0
+            cell.foodTypesLabel.alpha = 0
+            cell.freshnessLabel.alpha = 0
+            
+//            if let description = post["foodType"] as? NSString {
+//                cell.foodTypesLabel?.text = description
+//            }
+            
+            cell.foodTypesLabel?.text = post.objectForKey("foodType") as? NSString
+            cell.addressLabel?.text = post.objectForKey("address") as? NSString
+           
+            var dataFormatter:NSDateFormatter = NSDateFormatter()
+            dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            cell.timeStampLabel.text = dataFormatter.stringFromDate(post.createdAt)
+            
+            
+            cell.usernameLabel.text = post.objectForKey("user").username
+
+            var a:Double = post.objectForKey("freshness") as Double
+            var int = Int(round(a))
+            var string = String(int)
+            cell.freshnessLabel?.text = "Freshness: \(string)/5"
+            
+            UIView.animateWithDuration(0.5, animations: {
+                cell.foodTypesLabel.alpha = 1
+                cell.timeStampLabel.alpha = 1
+                cell.usernameLabel.alpha = 1
+                cell.addressLabel.alpha = 1
+                cell.freshnessLabel.alpha = 1
+            })
+
     
 //            var findPost:PFQuery = PFUser.query()
 //            findPost.whereKey("objectId", equalTo: post.objectForKey("sweeter").objectId)
     
-            return cell
+            
     
     //        findSweeter.findObjectsInBackgroundWithBlock{
     //            (objects:[AnyObject]!, error:NSError!)->Void in
@@ -140,6 +158,10 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     //            }
     //        }
     
+            
+            return cell
+            
+            
         }
     
 

@@ -12,12 +12,13 @@ import MapKit
 import CoreLocation
 import Parse
 
+var address = "Click Find Me"
+
+
 class createPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
     
     var user = PFUser.currentUser()
     var manager = CLLocationManager()
-    
-    var address = "Click Find Me"
     
     @IBOutlet var foodType: UITextField!
     
@@ -68,7 +69,8 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
         post["freshness"] = freshness.value
         post["location"] = postLocation
 //        post["foodPic"] = imageFile
-        post["username"] = user
+        post["user"] = user
+        post["address"] = address
         
         post.setObject(imageFile, forKey: "foodPic")
 
@@ -162,11 +164,11 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
                 }
                 
                 
-                self.address = "\(subThoroughfare) \(thoroughfare)"
+                address = "\(subThoroughfare) \(thoroughfare)"
                 
-                if self.address == " " {
+                if address == " " {
                     var date = NSDate()
-                    self.address = "Unknown Location added \(date)"
+                    address = "Unknown Location added \(date)"
                 }
                 
             }
