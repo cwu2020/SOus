@@ -13,9 +13,10 @@ import Parse
 
 class TableViewController: UITableViewController, CLLocationManagerDelegate {
     
-    var timelineData:NSMutableArray! = NSMutableArray()
+    var timelineData:NSMutableArray = NSMutableArray()
     
     var manager = CLLocationManager()
+
 
     
     @IBAction func loadData(sender: AnyObject) {
@@ -54,6 +55,8 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
+
     override func viewDidAppear(animated: Bool) {
         
         self.loadData(self)
@@ -92,62 +95,55 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
         // Return the number of rows in the section.
         return timelineData.count
     }
+
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-//     
-    let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as PostTableViewCell
-        
-        let post:PFObject = self.timelineData.objectAtIndex(indexPath.row) as PFObject
-        
-        
-        cell.postTextView.alpha = 0
-        cell.timeStamp.alpha = 0
-        cell.usernameLabel.alpha = 0
-        
-        cell.postTextView.text = post.objectForKey("foodType") as String
-        
-        
-        var dataFormatter:NSDateFormatter = NSDateFormatter()
-        dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        cell.timeStamp.text = dataFormatter.stringFromDate(post.createdAt)
-        cell.address.text = title
-        cell.freshness.text = post.objectForKey("freshness").value
-        
-//        var findPost:PFQuery = PFUser.query()
-//        findPost.whereKey("objectId", equalTo: post.objectForKey("sweeter").objectId)
-//        
-//        findSweeter.findObjectsInBackgroundWithBlock{
-//            (objects:[AnyObject]!, error:NSError!)->Void in
-//            if error == nil{
-//                let user:PFUser = (objects as NSArray).lastObject as PFUser
-//                cell.usernameLabel.text = user.username
+        override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    
+        let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as PostTableViewCell
+    
+            let post:PFObject = self.timelineData.objectAtIndex(indexPath.row) as PFObject
+    
+    
+//            cell.postTextView.alpha = 0
+//            cell.timeStamp.alpha = 0
+//            cell.usernameLabel.alpha = 0
+//    
+//            cell.postTextView.text = "helo"
 //                
-//                UIView.animateWithDuration(0.5, animations: {
-//                    cell.sweetTextView.alpha = 1
-//                    cell.timestampLabel.alpha = 1
-//                    cell.usernameLabel.alpha = 1
-//                })
-//            }
-//        }
-        
-        
-        return cell
-    }
+//                
+////                post.objectForKey("foodType") as? String
+//    
+//    
+//            var dataFormatter:NSDateFormatter = NSDateFormatter()
+//            dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+//            cell.timeStamp.text = dataFormatter.stringFromDate(post.createdAt)
+//            cell.address.text = title
+//            cell.freshness.text = post.objectForKey("freshness").value
     
+//            var findPost:PFQuery = PFUser.query()
+//            findPost.whereKey("objectId", equalTo: post.objectForKey("sweeter").objectId)
+    
+            return cell
+    
+    //        findSweeter.findObjectsInBackgroundWithBlock{
+    //            (objects:[AnyObject]!, error:NSError!)->Void in
+    //            if error == nil{
+    //                let user:PFUser = (objects as NSArray).lastObject as PFUser
+    //                cell.usernameLabel.text = user.username
+    //
+    //                UIView.animateWithDuration(0.5, animations: {
+    //                    cell.sweetTextView.alpha = 1
+    //                    cell.timestampLabel.alpha = 1
+    //                    cell.usernameLabel.alpha = 1
+    //                })
+    //            }
+    //        }
+    
+        }
+    
+
 }
-
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

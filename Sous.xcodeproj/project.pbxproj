@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8003FEEE1AEB6B1E00100FEF /* userGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = 8003FEED1AEB6B1E00100FEF /* userGeneric.png */; };
 		801676FF1AE96AF7008A9C60 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 801676FE1AE96AF7008A9C60 /* MapKit.framework */; };
 		801677011AE9AEB9008A9C60 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801677001AE9AEB9008A9C60 /* PostTableViewCell.swift */; };
 		8057D48C1AE864AF00245E7D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8057D48A1AE864AF00245E7D /* Bolts.framework */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8003FEED1AEB6B1E00100FEF /* userGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = userGeneric.png; path = ../../userGeneric.png; sourceTree = "<group>"; };
 		801676FE1AE96AF7008A9C60 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		801677001AE9AEB9008A9C60 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../PostTableViewCell.swift; sourceTree = "<group>"; };
 		8057D48A1AE864AF00245E7D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		80D9AA471ABB3F3C00BEBDAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8003FEED1AEB6B1E00100FEF /* userGeneric.png */,
 				8057D4A01AE8B30A00245E7D /* icon profile.png */,
 				8057D4981AE8A14400245E7D /* technovation1-01.png */,
 				80D9AAB11ABC33B800BEBDAB /* technovation-11.png */,
@@ -337,6 +340,7 @@
 				80D9AA4F1ABB3F3C00BEBDAB /* Main.storyboard in Resources */,
 				80D9AA541ABB3F3C00BEBDAB /* LaunchScreen.xib in Resources */,
 				80D9AA771ABB45F900BEBDAB /* technovation-01.png in Resources */,
+				8003FEEE1AEB6B1E00100FEF /* userGeneric.png in Resources */,
 				80D9AAB41ABC33D600BEBDAB /* technovation-09.png in Resources */,
 				80D9AA511ABB3F3C00BEBDAB /* Images.xcassets in Resources */,
 				8057D4991AE8A14400245E7D /* technovation1-01.png in Resources */,

@@ -7,51 +7,49 @@
 //
 
 import UIKit
-import MapKit
-import CoreLocation
+//import MapKit
+//import CoreLocation
 
-class FeedViewController: UIViewController, CLLocationManagerDelegate {
+class FeedViewController: UIViewController {
 
     @IBAction func addPost(sender: AnyObject) {
         
         self.performSegueWithIdentifier("createPost", sender: self)
     }
-    
-    var manager = CLLocationManager()
-    
-    @IBOutlet var feedTable: UITableView!
-    
+//    
+//    var manager = CLLocationManager()
+        
     override func viewDidLoad() {
         
-        super.viewDidLoad()
-        
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-        
-        
-        manager = CLLocationManager()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
+//        super.viewDidLoad()
+//        
+//        manager.requestWhenInUseAuthorization()
+//        manager.startUpdatingLocation()
+//        
+//        
+//        manager = CLLocationManager()
+//        manager.delegate = self
+//        manager.desiredAccuracy = kCLLocationAccuracyBest
         
         
 
         // Do any additional setup after loading the view.
     }
     
-    
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
-        var userLocation:CLLocation = locations[0] as CLLocation
-        
-        var latitude:CLLocationDegrees = userLocation.coordinate.latitude
-        var longitude:CLLocationDegrees = userLocation.coordinate.longitude
-        
-        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        
-        manager.stopUpdatingLocation()
-        
-        
-    }
+//    
+//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//        
+//        var userLocation:CLLocation = locations[0] as CLLocation
+//        
+//        var latitude:CLLocationDegrees = userLocation.coordinate.latitude
+//        var longitude:CLLocationDegrees = userLocation.coordinate.longitude
+//        
+//        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+//        
+//        manager.stopUpdatingLocation()
+//        
+//        
+//    }
 
 
     override func didReceiveMemoryWarning() {

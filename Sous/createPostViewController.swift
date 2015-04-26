@@ -26,50 +26,56 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var freshness: UISlider!
     
     @IBOutlet var location: UILabel!
-    
+ 
     @IBAction func chooseFoodPhoto(sender: AnyObject) {
         
         var image = UIImagePickerController()
+        image.delegate = self
         image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         image.allowsEditing = false
-        image.delegate = self
+        
         self.presentViewController(image, animated: true, completion: nil)
         
     }
     
-    @IBOutlet var foodPhoto: UIImageView!
+    @IBOutlet weak var foodPhoto: UIImageView!
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    var imageFile = PFFile()
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject: AnyObject]!) {
         self.dismissViewControllerAnimated(true, completion: nil)
         
         let imageData = UIImageJPEGRepresentation(image, 0.5)
-        let imageFile = PFFile(name:"image.jpeg", data:imageData)
-        imageFile.saveInBackground()
+        self.imageFile = PFFile(name:"image.jpeg", data:imageData)
+        self.imageFile.saveInBackground()
+        
         foodPhoto.image = image
         
     }
-
     
-    let imageFile = PFFile()
     
     @IBAction func findMe(sender: AnyObject) {
         
         location.text = address
         
     }
+    
     @IBAction func postButton(sender: AnyObject) {
         
         var post = PFObject(className:"Posts")
         post["foodType"] = foodType.text
         post["servings"] = servings.text
         post["freshness"] = freshness.value
-        post["foodPic"] = imageFile
+        post["location"] = postLocation
+//        post["foodPic"] = imageFile
+        post["username"] = user
         
+        post.setObject(imageFile, forKey: "foodPic")
 
         post.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                self.performSegueWithIdentifier("backToFeed", sender: self)
+                self.performSegueWithIdentifier("postToFeed", sender: self)
                 
             } else {
                 println(error)
@@ -78,6 +84,31 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
         }
         
     }
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        
+//        if user.objectForKey("profilePic") != nil {
+//            
+//            let userImageFile = user.objectForKey("profilePic") as PFFile
+//            
+//            userImageFile.getDataInBackgroundWithBlock {
+//                (imageData: NSData!, error: NSError!) -> Void in
+//                if error == nil {
+//                    let image = UIImage(data:imageData)
+//                    self.proPic.image = image
+//                }
+//            }
+//        } else {
+//            
+//            proPic.image = UIImage(named: "userGeneric.png")
+//            
+//            
+//        }
+//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +123,8 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         }
     
+    var postLocation = PFGeoPoint()
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         
         var userLocation:CLLocation = locations[0] as CLLocation
@@ -104,10 +137,8 @@ class createPostViewController: UIViewController, UIImagePickerControllerDelegat
         
         manager.stopUpdatingLocation()
         
-        var postLocation = PFGeoPoint(location: userLocation)
-        var post:PFObject = PFObject(className: "Posts")
-        post["location"] = postLocation
-        post.saveInBackground()
+        self.postLocation = PFGeoPoint(location: userLocation)
+
         
         
         CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler:{(placemarks, error) in

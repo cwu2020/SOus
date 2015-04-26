@@ -19,6 +19,12 @@ class MeViewController: UIViewController, UIImagePickerControllerDelegate, UINav
 
     @IBOutlet var joinDate: UILabel!
     
+    @IBAction func logOut(sender: AnyObject) {
+        
+        PFUser.logOut()
+        self.performSegueWithIdentifier("logOut", sender: self)
+        
+    }
     @IBAction func changeProPic(sender: AnyObject) {
         
         var image = UIImagePickerController()
@@ -28,6 +34,8 @@ class MeViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         
         self.presentViewController(image, animated: true, completion: nil)
     }
+    
+    
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -48,15 +56,26 @@ class MeViewController: UIViewController, UIImagePickerControllerDelegate, UINav
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let userImageFile = user.objectForKey("profilePic") as PFFile
         
-        userImageFile.getDataInBackgroundWithBlock {
-            (imageData: NSData!, error: NSError!) -> Void in
-            if error == nil {
-                let image = UIImage(data:imageData)
-                self.proPic.image = image
+        if user.objectForKey("profilePic") != nil {
+            
+            let userImageFile = user.objectForKey("profilePic") as PFFile
+            
+            userImageFile.getDataInBackgroundWithBlock {
+                (imageData: NSData!, error: NSError!) -> Void in
+                if error == nil {
+                    let image = UIImage(data:imageData)
+                    self.proPic.image = image
+                }
             }
+        } else {
+            
+            proPic.image = UIImage(named: "userGeneric.png")
+            
+            
         }
+        
+
         
         let date = user.createdAt //get the time, in this case the time an object was created.
         //format date
@@ -74,7 +93,7 @@ class MeViewController: UIViewController, UIImagePickerControllerDelegate, UINav
         // Do any additional setup after loading the view.
         proPic.layer.cornerRadius = proPic.frame.size.height/2;
         proPic.layer.masksToBounds = true;
-        proPic.layer.borderWidth = 2;
+        proPic.layer.borderWidth = 0;
     }
 
     override func didReceiveMemoryWarning() {

@@ -78,11 +78,10 @@ class PageItemController: UIViewController, UITextFieldDelegate {
     
     @IBAction func logInToggle(sender: AnyObject) {
         
-       // performSegueWithIdentifier("logInFromToggle", sender: self)
         
         if signUpActive == true {
             
-               signUpActive = false
+            signUpActive = false
             
             signUpButton.setTitle("Log In", forState: UIControlState.Normal)
             
@@ -259,9 +258,9 @@ class PageItemController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-//        if PFUser.currentUser() != nil {
-//            self.performSegueWithIdentifier("logInToHome", sender: self)
-//        }
+        if PFUser.currentUser() != nil {
+            self.performSegueWithIdentifier("logInToHome", sender: self)
+        }
     }
     
     

@@ -139,6 +139,16 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icM-oD-Ozd">
+                                        <rect key="frame" x="258" y="477" width="56" height="30"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logOut:" destination="xr1-uQ-Id7" eventType="touchUpInside" id="oDX-fI-HSU"/>
+                                            <segue destination="vXZ-lx-hvc" kind="show" identifier="logOut" id="qce-ly-CVE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -155,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6F-Aq-Uvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="592" y="-935"/>
+            <point key="canvasLocation" x="534" y="-1029"/>
         </scene>
         <!--Feed-->
         <scene sceneID="eYi-57-q1G">
@@ -166,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="136" id="CLP-Po-JEq" customClass="PostTableViewCell" customModule="Sous" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="136" id="CLP-Po-JEq" customClass="PostTableViewCell" customModule="Sous" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CLP-Po-JEq" id="mmN-Pv-Dnd">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -192,9 +202,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bF-XG-hdb">
-                                            <rect key="frame" x="214" y="33" width="98" height="95"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWc-t4-Y4G">
                                             <rect key="frame" x="127" y="8" width="64" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -202,7 +209,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4c-jl-jD4">
-                                            <rect key="frame" x="21" y="107" width="38" height="21"/>
+                                            <rect key="frame" x="21" y="108" width="38" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -211,20 +218,10 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outlet property="address" destination="kWc-t4-Y4G" id="BjN-eW-1WO"/>
-                                    <outlet property="freshness" destination="dMM-NJ-h1f" id="wEk-cd-uvV"/>
-                                    <outlet property="postTextView" destination="zr4-v7-NF3" id="eoV-Bv-7XY"/>
-                                    <outlet property="thumbNail" destination="8bF-XG-hdb" id="miD-M7-fLF"/>
-                                    <outlet property="timeStamp" destination="T4c-jl-jD4" id="cQd-rx-Bp5"/>
-                                    <outlet property="usernameLabel" destination="jmH-Q7-a4z" id="aeQ-hE-Bz4"/>
                                     <outletCollection property="gestureRecognizers" destination="wWz-Ri-Ypi" appends="YES" id="M8W-Mt-MBA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hgN-Wy-Ytr" id="x8F-l4-A1q"/>
-                            <outlet property="delegate" destination="hgN-Wy-Ytr" id="2aC-XE-7D1"/>
-                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Feed" id="gmH-kA-8lK">
@@ -245,7 +242,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57z-ez-35V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="wWz-Ri-Ypi"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="-1686"/>
+            <point key="canvasLocation" x="1048" y="-1687"/>
         </scene>
         <!--Create Post View Controller-->
         <scene sceneID="teE-J4-BhE">
@@ -290,6 +287,7 @@
                                 </state>
                                 <connections>
                                     <action selector="postButton:" destination="t6r-Zd-D2a" eventType="touchUpInside" id="Idr-XF-YsV"/>
+                                    <segue destination="hgN-Wy-Ytr" kind="show" identifier="postToFeed" id="Qgl-Lp-ZvY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Freshness:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHs-Jm-So4">
@@ -349,7 +347,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="foodPhoto" destination="NbW-XX-pYQ" id="hmz-vJ-otP"/>
+                        <outlet property="foodPhoto" destination="NbW-XX-pYQ" id="wch-Ck-5vY"/>
                         <outlet property="foodType" destination="OPP-1x-P1s" id="swl-kb-ks3"/>
                         <outlet property="freshness" destination="cjZ-3T-zk3" id="4pd-QR-Ucx"/>
                         <outlet property="location" destination="Swb-oe-tCu" id="B2Y-le-OvR"/>
@@ -425,7 +423,7 @@
         <image name="icon profile.png" width="29" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GIm-8b-47N"/>
+        <segue reference="471-Ct-K8l"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.77921195652173914" green="0.12893732739961311" blue="0.10704378409367342" alpha="1" colorSpace="calibratedRGB"/>
 </document>

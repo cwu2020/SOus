@@ -4,18 +4,7 @@ class PostTableViewCell: UITableViewCell {
     
     
     
-    @IBOutlet var usernameLabel: UILabel!
     
-    @IBOutlet var timeStamp: UILabel!
-    
-    @IBOutlet var postTextView: UILabel!
-   
-    
-    
-    @IBOutlet var address: UILabel!
-    
-    @IBOutlet var freshness: UILabel!
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
